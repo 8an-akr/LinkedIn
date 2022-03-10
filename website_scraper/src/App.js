@@ -1,0 +1,217 @@
+import "./App.css";
+import Settings from "./components/Settings/Settings";
+import Table from "./components/Table/Table";
+
+const list = [
+  {
+    Name: "Mel McVeigh",
+    Role: "VP Product - Consumer Brands & Commerce at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Sanjay Bhakta",
+    Role: "Chief Product & Technology Officer at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Diana Comsa",
+    Role: "Global Head of Customer Data at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Pamela Drucker Mann",
+    Role: "Global Chief Revenue Officer & President, U.S. Revenue at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Millie Tran",
+    Role: "Vice President, Content Strategy and Growth at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Deirdre Findlay",
+    Role: "Global Chief Marketing Officer & Head of Consumer Revenue at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Lina Calzado Vinardell",
+    Role: "Vice President Revenue Strategy, Europe at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Claire Fennessey",
+    Role: "Vice President and General Manager, Subscription Box Businesses at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Craig Kostelic",
+    Role: "Chief Business Officer, US Advertising Revenue and Head of Global Advertising Solutions at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Elizabeth Webbe Lunny",
+    Role: "Chief Buiness Officer, Style Divsion at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Michel Ballard",
+    Role: "Vice President/General Manager, Global Data Strategy & Monetization at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Deborah Brett",
+    Role: "Global Head of Revenue Operations & Enterprise Innovation at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Mike Berry",
+    Role: "Senior Vice President, Marketing Technology and CRM at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Ani S.",
+    Role: "Vice President, Business Operations & Integrated Planning at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Benny Wong",
+    Role: "Director of Engineering, Global Platform at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Stephen Vann",
+    Role: "Global Head of Technology Transformation at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Douglas Grinspan",
+    Role: "Chief Industry Officer, Head of Revenue - Technology, Business, Finance at Condé Nast",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Karthic Bala",
+    Role: "EVP & Chief Data Officer at Condé Nast",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Tracey Shechtman",
+    Role: "Head of Global Experiences at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Jason Schmidt",
+    Role: "Vice President, Data Strategy & Partnerships at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Michael Stuart",
+    Role: "Vice President, Marketing Science at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "John Shehata",
+    Role: "Global VP - Audience Development Strategy & CRM at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Alyssa Levy",
+    Role: "Director, Global Partnerships and Events at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Elaheh Nozari",
+    Role: "Global Commerce Category Director - Architectural Digest, Bon Appetit, Epicurious at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+  {
+    Name: "Sid Shah",
+    Role: "Global Head of Analytics & Insight at Condé Nast ",
+    Format: "f.last",
+    Domain: "google.com",
+    Company: "Condé Nast ",
+    Ads: "Google Adsense",
+  },
+];
+
+function App() {
+  return (
+    <div className="container">
+      <Settings />
+      <Table people={list} />
+    </div>
+  );
+}
+
+export default App;
